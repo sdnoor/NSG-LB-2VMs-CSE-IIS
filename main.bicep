@@ -438,7 +438,7 @@ resource storageaccountVM2 'Microsoft.Storage/storageAccounts@2021-02-01' = {
           name: 'nsgRule'
           properties: {
             access: 'Allow'
-            description: 'Allow HTTPs'
+            description: 'Allow Port 80 and Port 443'
             destinationAddressPrefix: '*'
             // destinationAddressPrefixes: [
             //   '*'
@@ -451,10 +451,10 @@ resource storageaccountVM2 'Microsoft.Storage/storageAccounts@2021-02-01' = {
             //     tags: {}
             //   }
             // ]
-            destinationPortRange: '80, 443'
-            // destinationPortRanges: [
-            //   '443'
-            // ]
+            // destinationPortRange: '80'
+            destinationPortRanges: [
+              '443', '80'
+            ]
             direction: 'Inbound'
             priority: 150
             protocol: 'Tcp'
