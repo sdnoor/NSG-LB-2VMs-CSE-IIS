@@ -451,7 +451,7 @@ resource storageaccountVM2 'Microsoft.Storage/storageAccounts@2021-02-01' = {
             //     tags: {}
             //   }
             // ]
-            destinationPortRange: '443'
+            destinationPortRange: '80, 443'
             // destinationPortRanges: [
             //   '443'
             // ]
