@@ -310,7 +310,7 @@ resource networkInterfaceVM1 'Microsoft.Network/networkInterfaces@2020-11-01' = 
             id: subnetRefLB
             properties: {
               networkSecurityGroup: {
-                id: nsg. id
+                id: nsg.id
                 properties: {
                   securityRules: [
                     {
